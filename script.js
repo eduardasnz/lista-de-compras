@@ -1,8 +1,16 @@
-const input = document.querySelector("input")
-const submit = document.querySelector("button")
+const objets = document.querySelector("ul");
+const button = document.querySelector("button");
+const deleteObjets = document.getElementById("complete-btn")
 
-submit.addEventListener("click", (event) => {
-  event.preventDefault()
-  
-  console.log(input.value)
-})
+
+button.addEventListener("click", (e) => {
+
+  e.preventDefault()
+
+    const newItem = document.createElement("li");
+    newItem.classList.add("li-of-list");
+    newItem.textContent = "Mesa ";
+
+    // Adicionar o item à lista
+    objets.appendChild(newItem);
+});
